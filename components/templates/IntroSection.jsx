@@ -1,12 +1,14 @@
 import React from 'react'
+// import { motion, useScroll, useTransform } from 'framer-motion'
 
-const AboutMeSection = () => {
+const IntroSection = () => {
   return (
-    <div className='w-full h-full'>
-            안녕하세요. <br/>
-            프론트개발자 강다혜 입니다.
+    <div className='w-full h-[100vh]'>
+      <div>
+        안녕하세요.
+      </div>
     </div>
   )
 }
 
-export default AboutMeSection
+export default IntroSection
