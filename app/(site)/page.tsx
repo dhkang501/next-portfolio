@@ -66,7 +66,7 @@ const page = () => {
             <div
                 id="navbar"
                 className={`fixed top-0 left-0 right-0 z-10 py-4 shadow-md transition-colors ${
-                    isDark ? 'bg-gray-800 text-white' : 'bg-white text-black'
+                    isDark ? 'bg-black text-white' : 'bg-white text-black'
                 }`}
             >
                 <div className='flex justify-between m-3'>
