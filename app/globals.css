@@ -21,6 +21,12 @@
     transition: background-color 0.3s, color 0.3s;
   }
 
+  img{
+    /* width: auto;
+    height: auto; */
+    object-fit: contain;
+  }
+
   /* @layer base {
     * {
       @apply border-border;
