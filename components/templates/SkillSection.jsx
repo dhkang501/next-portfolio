@@ -57,7 +57,7 @@ const SkillSection = () => {
     // TODO: 애니메이션 효과 추가
     <section className="text-black p-10">
       <div className="w-full flex flex-col justify-center">
-        <section className="text-6xl text-center mb-20">💪 SKILLS</section>
+        <div className="text-6xl text-center mb-20">💪 SKILLS</div>
         <div className="flex flex-col gap-2 text-white md:flex-row md:flex-nowrap">
           {skills.map((skill) => {
             const imagePrefix = getImagePrefix(skill);
