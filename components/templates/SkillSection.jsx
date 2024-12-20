@@ -54,19 +54,17 @@ const SkillSection = () => {
   };
 
   return (
+    // TODO: 애니메이션 효과 추가
     <section className="text-black p-10">
       <div className="w-full flex flex-col justify-center">
         <section className="text-6xl text-center mb-20">💪 SKILLS</section>
-        <div className="flex gap-2 text-white">
+        <div className="flex flex-col gap-2 text-white md:flex-row md:flex-nowrap">
           {skills.map((skill) => {
             const imagePrefix = getImagePrefix(skill);
             return (
-              <BgBorder
-                key={skill}
-              >
+              <BgBorder key={skill}>
                 <div className="my-5">{skill}</div>
-                {/* TODO: 미디어쿼리 적용중 */}
-                <div className="flex flex-wrap justify-center items-center gap-4 p-4 md:flex flex-row">
+                <div className="flex flex-wrap justify-center items-center gap-4 p-4">
                   {getSkills(skill).map((item) => (
                     <div
                       key={item.name}
