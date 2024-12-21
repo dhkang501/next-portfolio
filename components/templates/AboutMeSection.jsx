@@ -9,7 +9,7 @@ const ABOUT_ME_FIELD = [
 // TODO: 애니메이션 효과 추가하기
 const AboutMeSection = () => {
   return (
-    <section className='w-fit bg-green-600 text-white p-20'>
+    <section className='w-full bg-green-600 text-white p-20'>
       <div className='w-full flex flex-col'>
         <section className='text-6xl text-center mb-20 animate-fade-in'>
           👋 ABOUT ME
