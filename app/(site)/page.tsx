@@ -21,8 +21,8 @@ const page = () => {
     { title: 'About Me', scrollIndex: 1, ref: aboutMeRef },
     { title: 'Skill', scrollIndex: 2, ref: skillRef },
     { title: 'Archiving', scrollIndex: 3, ref: archivingRef },
-    { title: 'Career', scrollIndex: 4, ref: careerRef },
-    { title: 'Project', scrollIndex: 5, ref: projectRef },
+    { title: 'Project', scrollIndex: 4, ref: projectRef },
+    { title: 'Career', scrollIndex: 5, ref: careerRef },
   ];
 
   // 섹션으로 스크롤 이동
