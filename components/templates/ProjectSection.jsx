@@ -19,6 +19,7 @@ const ProjectSection = () => {
   return (
     <div className='p-10'>
       <BgBorder className={'flex flex-col justify-around p-3 text-white text-lg md:flex-row'}>
+        {/*  TODO : 주제 1 맨위로 빼기 */}
         <Carousel className='ml-10 w-1/2'>
           <CarouselContent>
             {fitcolBbashops.map((fitcolBbashop, index) => (
@@ -35,7 +36,9 @@ const ProjectSection = () => {
           </CarouselContent>
           <CarouselPrevious />
           <CarouselNext />
+          {/* TODO : 페이지네이션 추가 */}
         </Carousel>
+        {/* TODO: Text 컴포넌트 만들기 */}
         <section className='w-[300px] h-[400px]'>
           <h2 className="font-bold text-xl mb-2">프로젝트 1: 빠숍(쇼핑몰) 개발</h2>
           <p>
