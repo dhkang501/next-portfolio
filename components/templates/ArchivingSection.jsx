@@ -4,7 +4,7 @@ import Image from 'next/image';
 const ArchivingSection = () => {
   return (
     <section className="bg-green-600 text-white p-10">
-      <div className="text-4xl md:text-6xl text-center mb-10 md:mb-20">💪 ArchivingSection</div>
+      <div className="text-4xl md:text-6xl text-center mb-10 md:mb-20">💁‍♀️ ArchivingSection</div>
       <div className="flex flex-wrap gap-6 justify-center">
         {/* Github */}
         <div className="w-[380px] p-4 border-2 border-white rounded-xl">
@@ -51,7 +51,7 @@ const ArchivingSection = () => {
             className="cursor-pointer"
             onClick={() =>
               window.open(
-                'https://www.notion.so/1507872ec55f80f69649ee6691d85e44?pvs=4'
+                'https://mewing-scallop-540.notion.site/_-02cadcf780c248de86ca4c9af8440ef9'
               )
             }
           >
