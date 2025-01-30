@@ -59,7 +59,8 @@ const page = () => {
       <div ref={skillRef}><MySkillSection /></div>
       <div ref={archivingRef}><ArchivingSection /></div>
       <div ref={projectRef}><ProjectSection /></div>
-      <div ref={careerRef}><CareerSection /></div>
+      {/* TODO:  CareerSection 추가*/}
+      {/* <div ref={careerRef}><CareerSection /></div> */}
     </div>
   );
 };
