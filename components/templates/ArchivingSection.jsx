@@ -6,8 +6,8 @@ const ArchivingSection = () => {
     <section className="bg-green-600 text-white p-10">
       <div className="text-4xl md:text-6xl text-center mb-10 md:mb-20">💁‍♀️ ArchivingSection</div>
       <div className="flex flex-wrap gap-6 justify-center">
-        {/* Github */}
-        <div className="w-[380px] p-4 border-2 border-white rounded-xl">
+                {/* Github */}
+                <div className="w-[380px] p-4 border-2 border-white rounded-xl">
           <a href="https://github.com/dhkang501" className="block">
             <Image
               className="mb-4 bg-white rounded-xl h-[78px]"
@@ -46,7 +46,7 @@ const ArchivingSection = () => {
           </a>
         </div>
         {/* 이력서 및 포트폴리오 */}
-        <div className="w-[380px] p-4 border-2 border-white rounded-xl">
+        <div className="min-w-[300px] max-w-[380px] p-4 border-2 border-white rounded-xl">
           <div
             className="cursor-pointer"
             onClick={() =>
@@ -55,15 +55,17 @@ const ArchivingSection = () => {
               )
             }
           >
-            <div className="flex flex-row items-center bg-white rounded-xl mb-4 p-2">
+            <div className="flex flex-row items-center justify-start bg-white rounded-xl mb-4 p-2 gap-2 md:gap-4">
               <Image
                 src="/images/portfolio.png"
-                width="60"
-                height="60"
+                width={60}
+                height={60}
                 alt="Portfolio Icon"
-                className="rounded"
+                className="rounded flex-shrink-0 w-12 h-12 md:w-15 md:h-15"
               />
-              <p className="text-black md:text-6xl text-5xl font-bold ml-4">Portfolio</p>
+              <p className="text-black font-bold break-words pl-2 md:pl-3 text-[2.625rem] sm:text-6xl">
+                Portfolio
+              </p>
             </div>
             <div className="text-lg">
               이력서와 경력 포트폴리오를 PDF로 확인할 수 있습니다.
