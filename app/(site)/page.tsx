@@ -22,7 +22,7 @@ const page = () => {
     { title: 'Skill', scrollIndex: 2, ref: skillRef },
     { title: 'Archiving', scrollIndex: 3, ref: archivingRef },
     { title: 'Project', scrollIndex: 4, ref: projectRef },
-    { title: 'Career', scrollIndex: 5, ref: careerRef },
+    // { title: 'Career', scrollIndex: 5, ref: careerRef },
   ];
 
   // 섹션으로 스크롤 이동
