@@ -83,9 +83,8 @@ const ProjectSection = () => {
   }, [ticketApi]);
 // TODO: 반응형 수정!
   return (
-    <div className='p-10 flex flex-col gap-3'>
-      <div className="text-6xl text-center text-black mb-20">👩‍💻 Project</div>
-
+    <div className='p-10 flex flex-col gap-3 text-black'>
+      <div className="text-5xl md:text-6xl text-center mb-10 md:mb-20">👩‍💻 Project</div>
       {/* 프로젝트 1 섹션 */}
       <BgBorder className='text-white'>
         <h1 className="font-bold text-3xl m-10">프로젝트 1: 빠숍(쇼핑몰) 개발</h1>

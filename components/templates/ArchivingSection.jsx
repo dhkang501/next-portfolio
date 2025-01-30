@@ -63,7 +63,7 @@ const ArchivingSection = () => {
                 alt="Portfolio Icon"
                 className="rounded flex-shrink-0 w-12 h-12 md:w-15 md:h-15"
               />
-              <p className="text-black font-bold break-words pl-2 md:pl-3 text-[2.625rem] sm:text-6xl">
+              <p className="text-black font-bold break-words pl-2 md:pl-3 text-[2.8rem] sm:text-6xl">
                 Portfolio
               </p>
             </div>
