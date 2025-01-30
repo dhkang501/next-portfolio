@@ -86,28 +86,39 @@ const ProjectSection = () => {
     <div className='p-10 flex flex-col gap-3'>
       <div className="text-6xl text-center text-black mb-20">👩‍💻 Project</div>
 
-      <BgBorder className={'text-white'}>
-        <h1 className="font-bold text-xl mt-10 md:text-3xl md:m-10">프로젝트 1: 빠숍(쇼핑몰) 개발</h1>
-        <div className='flex flex-col justify-around text-lg md:flex-row'>
-          <Carousel setApi={setFitcolApi} className='md:ml-10 md:w-1/2 m-0 w-auto p-2'>
-            <CarouselContent>
-              {fitcolBbashops.map((fitcolBbashop, index) => (
-                <CarouselItem key={index} className="relative h-[200px] w-[400px] mt-10 md:h-[400px]">
-                  <Image
-                    src={fitcolBbashop}
-                    alt={`Fitcol Bbashop Component ${index + 1}`}
-                    layout="fill"
-                    className="rounded-md"
-                  />
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className=''/>
-            <CarouselNext />
-            <Pagination current={fitcolCurrent} total={fitcolCount} />
-          </Carousel>
-          <section className='w-[400px] h-auto mt-10 mb-10 md:mt-0'>
-            <p>
+      {/* 프로젝트 1 섹션 */}
+      <BgBorder className='text-white'>
+        <h1 className="font-bold text-3xl m-10">프로젝트 1: 빠숍(쇼핑몰) 개발</h1>
+        <div className='flex flex-col md:flex-row justify-around text-lg'>
+          {/* 데스크탑: 원본 UI 유지, 모바일: 반응형 적용 */}
+          <div className='md:ml-10 md:w-1/2 w-full px-4 md:px-0'>
+            <Carousel setApi={setFitcolApi} className='w-full md:w-auto'>
+              <CarouselContent>
+                {fitcolBbashops.map((fitcolBbashop, index) => (
+                  <CarouselItem 
+                    key={index} 
+                    className="relative h-[200px] w-full md:w-[400px] md:h-[400px] mt-10"
+                  >
+                    <div className="relative h-full w-full">
+                      <Image
+                        src={fitcolBbashop}
+                        alt={`Fitcol Bbashop Component ${index + 1}`}
+                        fill
+                        className="rounded-md object-cover"
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              {/* 데스크탑에서만 버튼 표시 */}
+              <CarouselPrevious className='hidden md:flex' />
+              <CarouselNext className='hidden md:flex' />
+              <Pagination current={fitcolCurrent} total={fitcolCount} />
+            </Carousel>
+          </div>
+          
+          <section className='w-full md:w-[400px] px-4 md:px-0 mt-10 md:mt-0 mb-10'>
+            <p className="md:text-base">
               카드사 고객의 포인트와 앱카드 인증을 활용한 이커머스 "빠숍" 개발. 인기 상품, 이벤트,
               찜한 상품 등 다양한 기능을 통해 사용자 경험을 강화.
             </p>
@@ -138,33 +149,42 @@ const ProjectSection = () => {
         </div>
       </BgBorder>
 
-      <BgBorder className={'text-white'}>
+      {/* 프로젝트 2 섹션 */}
+      <BgBorder className='text-white'>
         <h1 className="font-bold text-3xl m-10">프로젝트 2: 이용권 개발</h1>
-        <div className='flex flex-col justify-around text-lg md:flex-row'>
-          <Carousel setApi={setTicketApi} className='ml-10 w-1/2'>
-            <CarouselContent className='mt-16'>
-              {useTickets.map((useTicket, index) => (
-                <CarouselItem key={index} className="relative w-[400px] h-[400px] mt-10">
-                  <Image
-                    src={useTicket}
-                    alt={`Use Ticket Component ${index + 1}`}
-                    layout="fill"
-                    className="rounded-md"
-                  />
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-            <Pagination current={ticketCurrent} total={ticketCount} />
-          </Carousel>
-          <section className=' w-auto px-[6px] h-auto mb-10 md:px-0 md:w-[400px] '>
-            <p>
+        <div className='flex flex-col md:flex-row justify-around text-lg'>
+          <div className='md:ml-10 md:w-1/2 w-full px-4 md:px-0'>
+            <Carousel setApi={setTicketApi} className='w-full md:w-auto'>
+              <CarouselContent className=' md:mt-0'>
+                {useTickets.map((useTicket, index) => (
+                  <CarouselItem 
+                    key={index} 
+                    className="relative w-full md:w-[400px] h-[200px] md:h-[400px] mt-10"
+                  >
+                    <div className="relative h-full w-full">
+                      <Image
+                        src={useTicket}
+                        alt={`Use Ticket Component ${index + 1}`}
+                        fill
+                        className="rounded-md object-cover"
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className='hidden md:flex' />
+              <CarouselNext className='hidden md:flex' />
+              <Pagination current={ticketCurrent} total={ticketCount} />
+            </Carousel>
+          </div>
+          
+          <section className='w-full md:w-[400px] px-4 md:px-0 mb-10'>
+            <p className="md:text-base">
               멜론과 협업한 프로젝트를 주도적으로 진행했습니다.
               특정 카드사와 제휴하여 사용자들에게 할인된 가격으로 음악 스트리밍 이용권을 제공합니다.
             </p>
             <ul className="mt-3">
-              <ListItem
+            <ListItem
                 title="1. 이용권 발급"
                 descriptions={[
                   '앱카드 인증과 멜론 인증을 통해 사용자가 프로모션 혜택을 받아 이용권을 발급받는 프로세스 개발.',
@@ -195,6 +215,7 @@ const ProjectSection = () => {
       </BgBorder>
     </div>
   );
+
 };
 
 export default ProjectSection;
