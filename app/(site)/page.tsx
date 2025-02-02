@@ -1,6 +1,6 @@
 'use client'
 import React, { useRef } from 'react';
-import Header from '@/components/common/Header';
+import MainHeader from '@/components/common/Header';
 import IntroSection from '@/components/templates/IntroSection';
 import AboutMeSection from '@/components/templates/AboutMeSection';
 import MySkillSection from '@/components/templates/SkillSection';
@@ -9,7 +9,7 @@ import ProjectSection from '@/components/templates/ProjectSection';
 import CareerSection from '@/components/templates/CareerSection';
 
 const page = () => {
-  const headerHeight = 64;
+  const headerHeight = 92;
   const introRef = useRef<HTMLDivElement | null>(null);
   const aboutMeRef = useRef<HTMLDivElement | null>(null);
   const skillRef = useRef<HTMLDivElement | null>(null);
@@ -48,7 +48,7 @@ const page = () => {
 
   return (
     <div>
-      <Header
+      <MainHeader
         headers={headers}
         headerHeight={headerHeight}
         scrollToTop={scrollToTop}

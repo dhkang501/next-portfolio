@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import Image from 'next/image';
 
@@ -6,8 +7,8 @@ const ArchivingSection = () => {
     <section className="bg-green-600 text-white p-10">
       <div className="text-4xl md:text-6xl text-center mb-10 md:mb-20">💁‍♀️ ArchivingSection</div>
       <div className="flex flex-wrap gap-6 justify-center">
-                {/* Github */}
-                <div className="w-[380px] p-4 border-2 border-white rounded-xl">
+        {/* Github */}
+        <div className="w-[380px] p-4 border-2 border-white rounded-xl">
           <a href="https://github.com/dhkang501" className="block">
             <Image
               className="mb-4 bg-white rounded-xl h-[78px]"
@@ -51,7 +52,7 @@ const ArchivingSection = () => {
             className="cursor-pointer"
             onClick={() =>
               window.open(
-                'https://mewing-scallop-540.notion.site/_-02cadcf780c248de86ca4c9af8440ef9'
+                'https://mewing-scallop-540.notion.site/_-_PDF-18c7872ec55f80a3a440c93e6ac91fe5'
               )
             }
           >

@@ -1,3 +1,4 @@
+'use client';
 import React, { useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
@@ -85,7 +86,10 @@ const IntroSection = () => {
       {/* 첫 번째 섹션 */}
       <motion.div
         className="fixed inset-0 flex flex-col items-center justify-center"
-        style={{ scale: containerScale }}
+        style={{ 
+          scale: containerScale,
+          pointerEvents: 'none',
+         }}
       >
         <motion.div
           style={{ opacity: mainTitleOpacity }}
@@ -127,7 +131,7 @@ const IntroSection = () => {
       {/* 두 번째 섹션 */}
       <motion.div
         className="fixed inset-0 flex flex-col items-center justify-center"
-        style={{ translateY: containerTranslateY }}
+        style={{ translateY: containerTranslateY, pointerEvents: 'none' }}
       >
         <motion.div
           style={{ 

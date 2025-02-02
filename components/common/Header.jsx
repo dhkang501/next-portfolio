@@ -21,7 +21,7 @@ const Header = ({ headers, headerHeight, scrollToTop, scrollToSection }) => {
   return (
     <div
       id="navbar"
-      className={`fixed top-0 left-0 right-0 z-10 py-4 shadow-md transition-colors hidden md:block ${
+      className={`fixed top-0 left-0 right-0 z-10 p-4 shadow-md transition-colors hidden md:block ${
         isDark ? 'bg-black text-white' : 'bg-white text-black'
       }`}
     >
