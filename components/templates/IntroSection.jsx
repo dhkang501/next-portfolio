@@ -16,7 +16,6 @@ const MOTION_OFFSET = {
 const IntroSection = () => {
   const { scrollY } = useScroll();
   const innerHeight = useRef(0);
-  const containerRef = useRef(null);
 
   // 반응형 처리
   useEffect(() => {
@@ -79,7 +78,6 @@ const IntroSection = () => {
 
   return (
     <div 
-      ref={containerRef}
       className="w-full relative bg-black"
       style={{ height: INTRO_SECTION_PAGE_HEIGHT }}
     >
