@@ -14,16 +14,15 @@ const AboutMeSection = () => {
         <section className='text-4xl md:text-5xl lg:text-6xl text-center mb-8 md:mb-12 lg:mb-20 animate-fade-down'>
           👋 ABOUT ME
         </section>
-        <section className='flex flex-col justify-between gap-10 mb-20 md:flex-row '>
+        <section className='flex flex-col justify-between gap-10 mb-8 md:mb-20 md:flex-row '>
           {ABOUT_ME_FIELD.map((item, index) => (
             <section
               key={index}
-              className='text-center mb-6 animate-fade-up'
+              className='text-center mb-4 md:mb-6 animate-fade-up'
               style={{animationDelay: `${index * 0.1}s`, animationFillMode: 'both'}}
             >
               <div className='text-lg md:text-xl lg:text-2xl font-bold'>{item.title}</div>
-              <div className='inline-block mt-2 border-b-2 border-black w-24'></div>
-              <div className='text-lg md:text-xl lg:text-2xl font-bold md:w-max w-auto'>{item.fields}</div>
+              <div className='text-lg md:text-xl lg:text-2xl font-bold md:w-max w-auto mt-2'>{item.fields}</div>
             </section>
           ))}
         </section>
