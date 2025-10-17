@@ -203,8 +203,8 @@ const ProjectSection = () => {
               <Pagination current={ticketCurrent} total={ticketCount} />
             </Carousel>
           </div>
-          
-          <section className='w-full md:w-[400px] px-4 md:px-0 mb-10'>
+
+          <section className='w-full md:w-[400px] px-4 md:px-0 mt-10 md:mt-0 mb-10'>
             <p className="md:text-base">
               멜론과 협업한 프로젝트를 주도적으로 진행했습니다.
               특정 카드사와 제휴하여 사용자들에게 할인된 가격으로 음악 스트리밍 이용권을 제공합니다.
