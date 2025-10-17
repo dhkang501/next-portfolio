@@ -104,7 +104,7 @@ const ProjectSection = () => {
                         src={fitcolBbashop}
                         alt={`Fitcol Bbashop Component ${index + 1}`}
                         fill
-                        className="rounded-md object-cover"
+                        className="rounded-md object-contain"
                       />
                     </div>
                   </CarouselItem>
@@ -166,7 +166,7 @@ const ProjectSection = () => {
                         src={useTicket}
                         alt={`Use Ticket Component ${index + 1}`}
                         fill
-                        className="rounded-md object-cover"
+                        className="rounded-md object-contain"
                       />
                     </div>
                   </CarouselItem>
