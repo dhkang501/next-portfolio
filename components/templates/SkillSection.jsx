@@ -54,21 +54,20 @@ const SkillSection = () => {
   };
 
   return (
-    // TODO: 애니메이션 효과 추가
-    <section className="text-black p-10">
+    <section className="bg-black text-white p-10">
       <div className="w-full flex flex-col justify-center">
-        <div className="text-5xl md:text-6xl text-center mb-10 md:mb-20">💪 SKILLS</div>
+        <div className="text-5xl md:text-6xl text-center mb-10 md:mb-20 animate-fade-down">💪 SKILLS</div>
         <div className="flex flex-col gap-2 text-white md:flex-row md:flex-nowrap">
-          {skills.map((skill) => {
+          {skills.map((skill, skillIndex) => {
             const imagePrefix = getImagePrefix(skill);
             return (
-              <BgBorder key={skill}>
+              <BgBorder key={skill} className="animate-fade-up" style={{animationDelay: `${skillIndex * 0.15}s`, animationFillMode: 'both'}}>
                 <div className="my-5">{skill}</div>
                 <div className="flex flex-wrap justify-center items-center gap-4 p-4">
                   {getSkills(skill).map((item) => (
                     <div
                       key={item.name}
-                      className="border-2 border-white rounded-xl flex items-center justify-center"
+                      className="border-2 border-white rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:-translate-y-2 hover:shadow-2xl hover:rotate-3 cursor-pointer"
                     >
                       <Image
                         src={`/images/skills/${imagePrefix}${item.name}.png`}

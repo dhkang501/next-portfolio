@@ -4,11 +4,11 @@ import Image from 'next/image';
 
 const ArchivingSection = () => {
   return (
-    <section className="bg-green-600 text-white p-10">
-      <div className="text-4xl md:text-6xl text-center mb-10 md:mb-20">💁‍♀️ ArchivingSection</div>
+    <section className="bg-white text-black p-10">
+      <div className="text-4xl md:text-6xl text-center mb-10 md:mb-20 animate-fade-down">💁‍♀️ Archiving</div>
       <div className="flex flex-wrap gap-6 justify-center">
         {/* Github */}
-        <div className="w-[380px] p-4 border-2 border-white rounded-xl">
+        <div className="w-[380px] p-4 border-2 border-black rounded-xl animate-scale-in transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-2">
           <a href="https://github.com/dhkang501" className="block">
             <Image
               className="mb-4 bg-white rounded-xl h-[78px]"
@@ -25,7 +25,7 @@ const ArchivingSection = () => {
           </a>
         </div>
         {/* Blog */}
-        <div className="w-[380px] p-4 border-2 border-white rounded-xl">
+        <div className="w-[380px] p-4 border-2 border-black rounded-xl animate-scale-in transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-2">
           <a href="https://developer-nation.tistory.com/" className="block">
             <div className="flex flex-row items-center bg-white rounded-xl mb-4 p-2">
               <Image
@@ -47,7 +47,7 @@ const ArchivingSection = () => {
           </a>
         </div>
         {/* 이력서 및 포트폴리오 */}
-        <div className="min-w-[300px] max-w-[380px] p-4 border-2 border-white rounded-xl">
+        <div className="w-[380px] p-4 border-2 border-black rounded-xl animate-scale-in transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-2">
           <div
             className="cursor-pointer"
             onClick={() =>

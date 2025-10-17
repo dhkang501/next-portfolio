@@ -84,10 +84,10 @@ const ProjectSection = () => {
   }, [ticketApi]);
 // TODO: 반응형 수정!
   return (
-    <div className='p-10 flex flex-col gap-3 text-black'>
-      <div className="text-5xl md:text-6xl text-center mb-10 md:mb-20">👩‍💻 Project</div>
+    <div className='bg-black p-10 flex flex-col gap-3 text-white'>
+      <div className="text-5xl md:text-6xl text-center mb-10 md:mb-20 animate-fade-down">👩‍💻 Project</div>
       {/* 프로젝트 1 섹션 */}
-      <BgBorder className='text-white'>
+      <BgBorder className='text-white animate-fade-up' style={{animationDelay: '0.2s', animationFillMode: 'both'}}>
         <h1 className="font-bold text-3xl m-10">프로젝트 1: 빠숍(쇼핑몰) 개발</h1>
         <div className='flex flex-col md:flex-row justify-around text-lg'>
           {/* 데스크탑: 원본 UI 유지, 모바일: 반응형 적용 */}
@@ -150,7 +150,7 @@ const ProjectSection = () => {
       </BgBorder>
 
       {/* 프로젝트 2 섹션 */}
-      <BgBorder className='text-white'>
+      <BgBorder className='text-white animate-fade-up' style={{animationDelay: '0.4s', animationFillMode: 'both'}}>
         <h1 className="font-bold text-3xl m-10">프로젝트 2: 이용권 개발</h1>
         <div className='flex flex-col md:flex-row justify-around text-lg'>
           <div className='md:ml-10 md:w-1/2 w-full px-4 md:px-0'>
