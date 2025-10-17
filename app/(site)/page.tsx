@@ -7,6 +7,7 @@ import MySkillSection from '@/components/templates/SkillSection';
 import ArchivingSection from '@/components/templates/ArchivingSection';
 import ProjectSection from '@/components/templates/ProjectSection';
 import CareerSection from '@/components/templates/CareerSection';
+import ContactMeSection from '@/components/templates/ContactMeSection';
 
 const page = () => {
   const headerHeight = 92;
@@ -16,13 +17,15 @@ const page = () => {
   const archivingRef = useRef<HTMLDivElement | null>(null);
   const projectRef = useRef<HTMLDivElement | null>(null);
   const careerRef = useRef<HTMLDivElement | null>(null);
+  const contactRef = useRef<HTMLDivElement | null>(null);
 
   const headers = [
     { title: 'About Me', scrollIndex: 1, ref: aboutMeRef },
     { title: 'Skill', scrollIndex: 2, ref: skillRef },
     { title: 'Archiving', scrollIndex: 3, ref: archivingRef },
     { title: 'Project', scrollIndex: 4, ref: projectRef },
-    // { title: 'Career', scrollIndex: 5, ref: careerRef },
+    { title: 'Contact', scrollIndex: 5, ref: contactRef },
+    // { title: 'Career', scrollIndex: 6, ref: careerRef },
   ];
 
   // 섹션으로 스크롤 이동
@@ -59,6 +62,7 @@ const page = () => {
       <div ref={skillRef}><MySkillSection /></div>
       <div ref={archivingRef}><ArchivingSection /></div>
       <div ref={projectRef}><ProjectSection /></div>
+      <div ref={contactRef}><ContactMeSection /></div>
       {/* TODO:  CareerSection 추가*/}
       {/* <div ref={careerRef}><CareerSection /></div> */}
     </div>
