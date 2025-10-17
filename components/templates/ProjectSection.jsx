@@ -101,7 +101,7 @@ const ProjectSection = () => {
         <h1 className="font-bold text-2xl md:text-3xl m-4 md:m-6 lg:m-10">프로젝트 1: 빠숍(쇼핑몰) 개발</h1>
         <div className='flex flex-col md:flex-row justify-around text-lg'>
           {/* 데스크탑: 원본 UI 유지, 모바일: 반응형 적용 */}
-          <div className='md:ml-10 md:w-1/2 w-full px-4 md:px-0'>
+          <div className='md:ml-10 md:w-1/2 w-full px-4 md:px-12'>
             <Carousel
               setApi={setFitcolApi}
               className='w-full md:w-auto'
@@ -171,7 +171,7 @@ const ProjectSection = () => {
       <BgBorder className='text-white animate-fade-up' style={{animationDelay: '0.4s', animationFillMode: 'both'}}>
         <h1 className="font-bold text-2xl md:text-3xl m-4 md:m-6 lg:m-10">프로젝트 2: 이용권 개발</h1>
         <div className='flex flex-col md:flex-row justify-around text-lg'>
-          <div className='md:ml-10 md:w-1/2 w-full px-4 md:px-0'>
+          <div className='md:ml-10 md:w-1/2 w-full px-4 md:px-12'>
             <Carousel
               setApi={setTicketApi}
               className='w-full md:w-auto'
