@@ -54,9 +54,9 @@ const SkillSection = () => {
   };
 
   return (
-    <section className="bg-black text-white p-10">
+    <section className="bg-black text-white p-4 md:p-8 lg:p-10">
       <div className="w-full flex flex-col justify-center">
-        <div className="text-5xl md:text-6xl text-center mb-10 md:mb-20 animate-fade-down">💪 SKILLS</div>
+        <div className="text-4xl md:text-5xl lg:text-6xl text-center mb-8 md:mb-12 lg:mb-20 animate-fade-down">💪 SKILLS</div>
         <div className="flex flex-col gap-2 text-white md:flex-row md:flex-nowrap">
           {skills.map((skill, skillIndex) => {
             const imagePrefix = getImagePrefix(skill);

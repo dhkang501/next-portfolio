@@ -2,6 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import BgBorder from '../common/BgBorder';
+import Autoplay from "embla-carousel-autoplay";
 import {
   Carousel,
   CarouselContent,
@@ -24,15 +25,15 @@ import useTicket6 from '@/public/images/projects/useTicket/useTicket6.png';
 
 const ListItem = ({ title, description, descriptions }) => {
   return (
-    <div className="mb-1 md:mb-5">
-      <h3 className="text-xl font-bold">{title}</h3>
+    <div className="mb-3 md:mb-5">
+      <h3 className="text-lg md:text-xl font-bold">{title}</h3>
       {description && (
-        <p className="text-base list-disc list-inside ml-4">{description}</p>
+        <p className="text-sm md:text-base list-disc list-inside ml-4">{description}</p>
       )}
       {descriptions && Array.isArray(descriptions) && (
         <ul className="list-disc list-inside ml-5 mt-2">
           {descriptions.map((desc, index) => (
-            <li key={index} className="text-base">{desc}</li>
+            <li key={index} className="text-sm md:text-base">{desc}</li>
           ))}
         </ul>
       )}
@@ -63,6 +64,15 @@ const ProjectSection = () => {
   const [ticketCurrent, setTicketCurrent] = React.useState(0);
   const [ticketCount, setTicketCount] = React.useState(0);
 
+  // Autoplay 플러그인 설정 (4초마다 자동 전환)
+  const fitcolAutoplay = React.useRef(
+    Autoplay({ delay: 4000, stopOnInteraction: true })
+  );
+
+  const ticketAutoplay = React.useRef(
+    Autoplay({ delay: 4000, stopOnInteraction: true })
+  );
+
   React.useEffect(() => {
     if (fitcolApi) {
       setFitcolCount(fitcolApi.scrollSnapList().length);
@@ -84,22 +94,30 @@ const ProjectSection = () => {
   }, [ticketApi]);
 // TODO: 반응형 수정!
   return (
-    <div className='bg-black p-10 flex flex-col gap-3 text-white'>
-      <div className="text-5xl md:text-6xl text-center mb-10 md:mb-20 animate-fade-down">👩‍💻 Project</div>
+    <div className='bg-black p-4 md:p-8 lg:p-10 flex flex-col gap-3 text-white'>
+      <div className="text-4xl md:text-5xl lg:text-6xl text-center mb-8 md:mb-12 lg:mb-20 animate-fade-down">👩‍💻 Project</div>
       {/* 프로젝트 1 섹션 */}
       <BgBorder className='text-white animate-fade-up' style={{animationDelay: '0.2s', animationFillMode: 'both'}}>
-        <h1 className="font-bold text-3xl m-10">프로젝트 1: 빠숍(쇼핑몰) 개발</h1>
+        <h1 className="font-bold text-2xl md:text-3xl m-4 md:m-6 lg:m-10">프로젝트 1: 빠숍(쇼핑몰) 개발</h1>
         <div className='flex flex-col md:flex-row justify-around text-lg'>
           {/* 데스크탑: 원본 UI 유지, 모바일: 반응형 적용 */}
           <div className='md:ml-10 md:w-1/2 w-full px-4 md:px-0'>
-            <Carousel setApi={setFitcolApi} className='w-full md:w-auto'>
-              <CarouselContent>
+            <Carousel
+              setApi={setFitcolApi}
+              className='w-full md:w-auto'
+              plugins={[fitcolAutoplay.current]}
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+            >
+              <CarouselContent className="-ml-2 md:-ml-4">
                 {fitcolBbashops.map((fitcolBbashop, index) => (
-                  <CarouselItem 
-                    key={index} 
-                    className="relative h-[200px] w-full md:w-[400px] md:h-[400px] mt-10"
+                  <CarouselItem
+                    key={index}
+                    className="relative h-[180px] w-full sm:h-[250px] md:w-[400px] md:h-[400px] mt-6 md:mt-10 pl-2 md:pl-4"
                   >
-                    <div className="relative h-full w-full">
+                    <div className="relative h-full w-full transition-opacity duration-1000 ease-in-out">
                       <Image
                         src={fitcolBbashop}
                         alt={`Fitcol Bbashop Component ${index + 1}`}
@@ -140,7 +158,7 @@ const ProjectSection = () => {
                 description="옵션 선택, 결제 UI, 슬라이딩 팝업 구현"
               />
             </ul>
-            <p className="mt-3 text-lg">
+            <p className="mt-3 text-base md:text-lg">
               <strong>사용 기술:</strong> Vue, Vuex, Axios, SCSS<br />
               <strong>개발 기간:</strong> 2022.11 ~ 2023.06<br />
               <strong>참여 인원:</strong> 프론트엔드 4명, 서버 1명
@@ -151,17 +169,25 @@ const ProjectSection = () => {
 
       {/* 프로젝트 2 섹션 */}
       <BgBorder className='text-white animate-fade-up' style={{animationDelay: '0.4s', animationFillMode: 'both'}}>
-        <h1 className="font-bold text-3xl m-10">프로젝트 2: 이용권 개발</h1>
+        <h1 className="font-bold text-2xl md:text-3xl m-4 md:m-6 lg:m-10">프로젝트 2: 이용권 개발</h1>
         <div className='flex flex-col md:flex-row justify-around text-lg'>
           <div className='md:ml-10 md:w-1/2 w-full px-4 md:px-0'>
-            <Carousel setApi={setTicketApi} className='w-full md:w-auto'>
-              <CarouselContent className=' md:mt-0'>
+            <Carousel
+              setApi={setTicketApi}
+              className='w-full md:w-auto'
+              plugins={[ticketAutoplay.current]}
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+            >
+              <CarouselContent className="-ml-2 md:-ml-4">
                 {useTickets.map((useTicket, index) => (
-                  <CarouselItem 
-                    key={index} 
-                    className="relative w-full md:w-[400px] h-[200px] md:h-[400px] mt-10"
+                  <CarouselItem
+                    key={index}
+                    className="relative w-full h-[180px] sm:h-[250px] md:w-[400px] md:h-[400px] mt-6 md:mt-10 pl-2 md:pl-4"
                   >
-                    <div className="relative h-full w-full">
+                    <div className="relative h-full w-full transition-opacity duration-1000 ease-in-out">
                       <Image
                         src={useTicket}
                         alt={`Use Ticket Component ${index + 1}`}
@@ -205,7 +231,7 @@ const ProjectSection = () => {
                 ]}
               />
             </ul>
-            <p className="mt-3 text-lg">
+            <p className="mt-3 text-base md:text-lg">
               <strong>사용 기술:</strong> Vue, Vuex, Axios, SCSS<br />
               <strong>개발 기간:</strong> 2023.09 ~ 2023.11.30<br />
               <strong>참여 인원:</strong> 프론트엔드 1명, 서버 1명
