@@ -27,7 +27,7 @@ const AboutMeSection = () => {
           ))}
         </section>
         <article className='text-center text-base md:text-lg lg:text-xl animate-fade-up px-4' style={{animationDelay: '0.5s', animationFillMode: 'both'}}>
-          저는 1년 2개월의 경력을 가진 프론트엔드 개발자로, Vue.js와 같은 프레임워크를 사용해 효율적이고 사용자 친화적인 웹 애플리케이션을 개발해왔습니다.
+          저는 1년 5개월의 경력을 가진 프론트엔드 개발자로, Vue.js와 같은 프레임워크를 사용해 효율적이고 사용자 친화적인 웹 애플리케이션을 개발해왔습니다.
           이커머스 개발 경험을 통해 컴포넌트 설계, 상태 관리, 반응형 UI/UX 구현 능력을 키웠으며, 사용자 경험을 개선하는 데 열정을 가지고 지속적으로 기술을 발전시키고 있습니다.
         </article>
       </div>
