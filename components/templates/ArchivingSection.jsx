@@ -52,7 +52,7 @@ const ArchivingSection = () => {
             className="cursor-pointer"
             onClick={() =>
               window.open(
-                'https://mewing-scallop-540.notion.site/_-FE-1817872ec55f807a84cffb47a8ae791d'
+                'https://mewing-scallop-540.notion.site/_-02cadcf780c248de86ca4c9af8440ef9'
               )
             }
           >
